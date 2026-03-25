@@ -1,0 +1,12 @@
+[2026-03-22 00:07:29] [31merror[39m: No matching document found for id "69b9bec36b2af601add33b87" version 6 modifiedPaths "optimizedPath"
+VersionError: No matching document found for id "69b9bec36b2af601add33b87" version 6 modifiedPaths "optimizedPath"
+    at generateVersionError (/Users/ashithshankaravula/Downloads/freight-command-ai-main/afis-backend/node_modules/mongoose/lib/model.js:566:10)
+    at model.save (/Users/ashithshankaravula/Downloads/freight-command-ai-main/afis-backend/node_modules/mongoose/lib/model.js:624:28)
+    at optimizeRoute (/Users/ashithshankaravula/Downloads/freight-command-ai-main/afis-backend/src/controllers/routeController.ts:50:19)
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2026-03-22 00:07:29] [31merror[39m: No matching document found for id "69b9bec36b2af601add33b87" version 6 modifiedPaths "optimizedPath, estimatedTime, trafficFactor"
+VersionError: No matching document found for id "69b9bec36b2af601add33b87" version 6 modifiedPaths "optimizedPath, estimatedTime, trafficFactor"
+    at generateVersionError (/Users/ashithshankaravula/Downloads/freight-command-ai-main/afis-backend/node_modules/mongoose/lib/model.js:566:10)
+    at model.save (/Users/ashithshankaravula/Downloads/freight-command-ai-main/afis-backend/node_modules/mongoose/lib/model.js:624:28)
+    at optimizeRoute (/Users/ashithshankaravula/Downloads/freight-command-ai-main/afis-backend/src/controllers/routeController.ts:50:19)
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)

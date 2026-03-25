@@ -1,0 +1,10 @@
+import { Router } from 'express';
+import { body } from 'express-validator';
+import { getAlerts, createAlert, resolveAlert } from '../controllers/alertController';
+import { authenticate } from '../middleware/auth';
+import { requireOperator } from '../middleware/roleCheck';
+const router = Router();
+router.get('/',authenticate,getAlerts);
+router.post('/',authenticate,requireOperator,[body('message').notEmpty()],createAlert);
+router.put('/:id/resolve',authenticate,requireOperator,resolveAlert);
+export default router;

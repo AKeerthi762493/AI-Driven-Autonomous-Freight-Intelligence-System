@@ -1,0 +1,13 @@
+import { Router } from 'express';
+import { body } from 'express-validator';
+import { bookFreight, getMyRequests, trackFreight, getAllFreightRequests, approveFreight, rejectFreight } from '../controllers/freightController';
+import { authenticate } from '../middleware/auth';
+import { requireOperator, requireAny } from '../middleware/roleCheck';
+const router = Router();
+router.post('/book',authenticate,requireAny,[body('commodityType').notEmpty(),body('sourceStation').notEmpty(),body('destinationStation').notEmpty(),body('quantity').isNumeric().isFloat({min:1})],bookFreight);
+router.get('/my-requests',authenticate,requireAny,getMyRequests);
+router.get('/track/:id',authenticate,requireAny,trackFreight);
+router.get('/all',authenticate,requireOperator,getAllFreightRequests);
+router.put('/approve/:id',authenticate,requireOperator,approveFreight);
+router.put('/reject/:id',authenticate,requireOperator,rejectFreight);
+export default router;

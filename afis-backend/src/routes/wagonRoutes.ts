@@ -1,0 +1,10 @@
+import { Router } from 'express';
+import { body } from 'express-validator';
+import { getAllWagons, createWagon, updateWagonLocation } from '../controllers/wagonController';
+import { authenticate } from '../middleware/auth';
+import { requireOperator } from '../middleware/roleCheck';
+const router = Router();
+router.get('/',authenticate,getAllWagons);
+router.post('/',authenticate,requireOperator,[body('wagonNumber').notEmpty(),body('currentLocation').notEmpty()],createWagon);
+router.put('/:id/location',authenticate,requireOperator,[body('location').notEmpty()],updateWagonLocation);
+export default router;

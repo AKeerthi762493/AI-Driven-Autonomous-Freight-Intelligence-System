@@ -1,0 +1,10 @@
+import { Router } from 'express';
+import { body } from 'express-validator';
+import { createRake, getAllRakes, assignWagonsToRake } from '../controllers/rakeController';
+import { authenticate } from '../middleware/auth';
+import { requireOperator } from '../middleware/roleCheck';
+const router = Router();
+router.get('/',authenticate,getAllRakes);
+router.post('/create',authenticate,requireOperator,[body('rakeNumber').notEmpty()],createRake);
+router.put('/assign-wagons',authenticate,requireOperator,[body('rakeId').notEmpty(),body('wagonIds').isArray({min:1})],assignWagonsToRake);
+export default router;

@@ -1,0 +1,10 @@
+import { Router } from 'express';
+import { body } from 'express-validator';
+import { runSimulationController, getSimulationStatus } from '../controllers/simulationController';
+import { authenticate } from '../middleware/auth';
+import { requireOperator } from '../middleware/roleCheck';
+const router = Router();
+router.post('/run',authenticate,requireOperator,[body('source').notEmpty(),body('destination').notEmpty()],runSimulationController);
+router.get('/status',authenticate,getSimulationStatus);
+router.get('/status/:id',authenticate,getSimulationStatus);
+export default router;
