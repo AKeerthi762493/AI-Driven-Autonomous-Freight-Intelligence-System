@@ -549,3 +549,13 @@ VersionError: No matching document found for id "69b9bec36b2af601add33b87" versi
 [2026-03-25 22:23:09] [32minfo[39m: CORS allowed origin: http://localhost:8080
 [2026-03-25 22:33:09] [32minfo[39m: Running alert checks...
 [2026-03-25 22:33:09] [32minfo[39m: Alert checks complete
+[2026-03-25 22:57:21] [32minfo[39m: MongoDB Connected: localhost
+[2026-03-25 22:57:21] [32minfo[39m: AFIS Backend running on http://localhost:5000
+[2026-03-25 22:57:21] [32minfo[39m: Environment: development
+[2026-03-25 22:57:21] [32minfo[39m: CORS allowed origin: http://localhost:8080
+[2026-03-25 23:07:21] [32minfo[39m: Running alert checks...
+[2026-03-25 23:07:21] [32minfo[39m: Alert checks complete
+[2026-03-25 23:23:16] [32minfo[39m: Running alert checks...
+[2026-03-25 23:23:16] [32minfo[39m: Alert checks complete
+[2026-03-25 23:33:16] [32minfo[39m: Running alert checks...
+[2026-03-25 23:33:16] [32minfo[39m: Alert checks complete
